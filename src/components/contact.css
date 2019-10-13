@@ -21,6 +21,7 @@
 .Contact .name {
   margin: 0 0 0.25rem;
   color: #eee;
+  font-size: 1.1em;
 }
 
 /* Status text */
@@ -45,4 +46,14 @@
 
 .Contact .status .status-offline {
   background: #f4511e;
+}
+
+.Contact .status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Contact .infos {
+  text-align: left;
 }
