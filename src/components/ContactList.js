@@ -47,7 +47,7 @@ const usersInfos = [
 const ContactList = () => {
   return usersInfos.map(user => {
     return (
-      <Contact name={user.name} avatar={user.avatar} online={user.online} />
+      <Contact name={user.name} avatar={user.avatar} online={user.online} key={user.name} />
     );
   });
 };
