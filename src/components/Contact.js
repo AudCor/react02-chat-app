@@ -11,10 +11,10 @@ class Contact extends React.Component {
   }
 
   render() {
-    //   const toggleStatus =  () => {
-    //     const newStatus = !this.state.online;
-    //     this.setState({online: newStatus});
-    // }
+    const toggleStatus = () => {
+      const newStatus = !this.state.online;
+      this.setState({ online: newStatus });
+    };
 
     return (
       <div className="Contact">
@@ -27,13 +27,7 @@ class Contact extends React.Component {
         </div>
         <div className="infos">
           <h3 className="name"> {this.props.name} </h3>
-          <Status
-            online={this.state.online}
-            toggleStatus={() => {
-              const newStatus = !this.state.online;
-              this.setState({ online: newStatus });
-            }}
-          />
+          <Status online={this.state.online} toggleStatus={toggleStatus} />
         </div>
       </div>
     );

@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 
 const Status = (props) => {
   return (
@@ -8,6 +7,6 @@ const Status = (props) => {
       <p className="status-text"> {props.online ? "online" : "offline"} </p>
     </div>
   );
-}
+};
 
 export default Status;

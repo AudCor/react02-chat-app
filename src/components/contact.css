@@ -60,7 +60,17 @@ border-radius: 50%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  cursor: default;
+  width: 67px;
+  height: 25px;
+  padding-left: 6px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.Contact .status:hover {
+  background-color: rgba(0,0,0,.1);
+  background-size: 120%;
+
 }
 
 .Contact .infos {
