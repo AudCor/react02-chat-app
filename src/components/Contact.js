@@ -1,17 +1,37 @@
 import React from "react";
 import "./contact.css";
-import Status from './Status';
+import Status from "./Status";
 
-const Contact = (props) => {
-  return (
-    <div className="Contact">
-      <img src={props.avatar} alt={props.name} className="avatar" />
-      <div className="infos">
-        <h3 className="name"> {props.name} </h3> 
-        <Status online={props.online} />
+class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      online: props.online,
+    };
+  }
+
+  render() {
+    const toggleStatus = () => {
+      const newStatus = !this.state.online;
+      this.setState({ online: newStatus });
+    };
+
+    return (
+      <div className="Contact">
+        <div className="avatar">
+          <img
+            src={this.props.avatar}
+            alt={this.props.name}
+            className="avatarBox"
+          />
+        </div>
+        <div className="infos">
+          <h3 className="name"> {this.props.name} </h3>
+          <Status online={this.state.online} toggleStatus={toggleStatus} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Contact;
